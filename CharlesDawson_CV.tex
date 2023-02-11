@@ -1,0 +1,358 @@
+% CV template based on that by Christopher Keyes (https://blogs.ams.org/mathgradblog/2021/10/08/formatting-your-cv-in-latex/)
+
+\documentclass{cv_style}
+\usepackage{enumitem}
+\usepackage{etaremune}
+\usepackage{amsmath}
+\usepackage[colorlinks = true, linkcolor = blue, urlcolor = blue, citecolor = blue, anchorcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{calc}
+
+\setlist[description]{leftmargin=0.7cm+\widthof{2023 $\vert$ },labelindent=0.5cm}
+
+\newcommand{\me}{\textbf{Charles Dawson}}
+
+\begin{document}
+
+\footnotetext[1]{Updated \today\ for submission to RSS Pioneers}
+\pagenumbering{gobble}
+
+\begin{center} \name{Charles Dawson}
+
+\contact{MIT}
+    {Department of Aeronautics and Astronautics}
+    {70 Vassar St. Rm. 31-230, Cambridge MA, (202) 531-8988}
+    {\href{mailto:cbd@mit.edu}{cbd@mit.edu}}
+    {\href{http://www.dawson.mit.edu}{dawson.mit.edu}}
+    {\href{https://scholar.google.com/citations?user=FkDdz9gAAAAJ&hl=en}{Google Scholar}}
+    {\href{https://www.linkedin.com/in/c6d5/}{LinkedIn}}
+
+\end{center}
+
+\section{Academic Interests}
+My research aims to support the design and verification of cyberphysical systems in three ways:
+\begin{enumerate}
+    \item \textit{Design optimization:} optimizing the parameters of the system (e.g. control gains, neural network weights, etc.) to achieve good performance despite uncertainty in the system's environment.
+    \item \textit{Safety verification:} characterizing a system's robustness to potentially adversarial environmental variation and predict corner cases where it is likely to fail (i.e. violate a constraint or incur a high cost).
+    \item \textit{Closing the design-verification loop:} using the results from safety verification to inform design, e.g. by using predicted corner cases to guide future design iterations.
+\end{enumerate}
+
+\section{Education}
+    \subsection{Massachusetts Institute of Technology}
+            \begin{description}[itemsep=-0.1em]
+                \item Ph.D., Aeronautics and Astronautics (expected 2024). Advised by Prof. Chuchu Fan.
+                \item Ph.D. Thesis: {\em Glass-box formal methods for autonomous system design \& verification}
+                \item S.M., Aeronautics and Astronautics (2020). Advised by Prof. Brian Williams.
+                \item S.M. Thesis: {\em Safe and Efficient Motion Planning through Chance-Constrained Nonlinear Optimization}
+            \end{description}
+
+    \subsection{Harvey Mudd College}
+            \begin{description}
+                \item B.S., Engineering, \textit{High Distinction, Departmental Honors} (2019).
+            \end{description}
+
+\section{Research Experience}
+\subsection{Reliable Autonomous Systems Lab (REALM)}
+\begin{trivlist}
+    \item Ph.D. thesis advised by Prof. Chuchu Fan.
+    \item My research is inspired by the field of \textit{formal methods}, which seeks to construct proofs about the behavior of a system using a formal mathematical model. Although many robotic systems are too complex to reduce to a set of equations, we instead often have access to a simulator (i.e. a computer program) that models the system's behavior. My research aims to exploit the rich mathematical structure embedded in simulators using \textit{program analysis} methods like automatic differentiation, program tracing, and probabilistic programming.
+    \begin{itemize}
+        \item Developed a design optimization framework based on differentiable simulation to find robust solutions to robot design problems, achieving up to 20x speedup over gradient-free methods.
+        \item Used adversarial optimization to identify counterexamples (cases where a robot fails to achieve its desired objective) and use those counterexamples as the basis for further design optimization.
+        \item Developed a simulation-driven probabilistic modeling framework for robot behavior to efficiently explore the design space and predict a diverse set of high-likelihood, high-severity failure modes for a given robotic system. Feeding these failure modes back into the optimization process yields robot designs with 10x lower worst-case cost while maintaining good average-case performance.
+    \end{itemize}
+
+    \item Prior to working on simulation-based optimization and verification methods in REALM, I worked on problems at the intersection of control theory and machine learning, applying Lyapunov, barrier function, and contraction metric theory to guarantee the safety of learned control policies.
+\end{trivlist}
+
+\subsection{Model-based Embedded and Robotic Systems Lab (MERS)}
+\begin{trivlist}
+    \item S.M. thesis advised by Prof. Brian Williams.
+
+    \item My research during my Masters degree focused on developing chance-constrained robot motion planning algorithms, using computational geometry and risk-aware nonlinear optimization to develop a fast motion planner that can navigate an uncertain environment with a guaranteed upper bound on the risk of collision. 
+\end{trivlist}
+
+\section{Teaching Experience}
+\subsection{Massachusetts Institute of Technology}
+\begin{description}[leftmargin=\parindent,labelindent=\parindent]
+    \item[AY 2022-23] Teaching Development Fellow (joint with Dept. of Aeronautics \& Astronautics and MIT Teaching and Learning Lab)
+        \begin{itemize}
+            \item Supported and mentored TAs in my department by facilitating workshops on student-centered pedagogy, including scaffolding, active learning, and lesson planning techniques.
+        \end{itemize}
+    \item[Fall 2020] Teaching Assistant, 16.413 Principles of Autonomy and Decision Making.
+        \begin{itemize}
+            \item Prepared and hosted weekly recitations on task and motion planning, search, inference, Markov models and decision processes, optimization, and constraint satisfaction problems.
+            \item Hosted weekly office hours to support student success on problem sets and exams.
+            \item Prepared and delivered lecture on linear programming.
+            \item Student feedback:
+                \begin{itemize}
+                    \item ``Charles' office hour sessions were always very clear and helpful''
+                    \item ``Charles was a great TA, really enthusiastic about the subject and put in extra work''
+                    \item ``I always left Charles's recitation with a stronger understanding of the course material.''
+                    \item ``Clear, kind, and insightful!''
+                \end{itemize}
+        \end{itemize}
+    \item[Spring 2021] Certificate, Graduate Teaching Development Tracks; MIT Teaching and Learning Lab.
+        \begin{itemize}
+            \item Completed workshops in Lesson Planning, Subject Design, Inclusive Teaching, and Teaching Practice
+        \end{itemize}
+\end{description}
+
+\subsection{Harvey Mudd College}
+\begin{description}[leftmargin=\parindent,labelindent=\parindent]
+    \item[AY 2017-18 \& AY 2018-19] Academic Excellence Tutor, E79 Introduction to Engineering Systems
+        \begin{itemize}
+            \item Hosted weekly tutoring sessions, answering students' questions on modeling, Laplace transforms, frequency response functions, and circuit analysis.
+        \end{itemize}
+\end{description}
+
+\section{Industry Experience}
+\subsection{Marble Technologies (Consulting Roboticist, 2022)}
+\begin{itemize}[itemsep=-0.1em]
+    \item Led a team of four engineers to build a robotic manipulation system for the food processing industry.
+    \item Delivered an MVP within 3 months, supporting demos leading to pre-orders and a \$10M Series A.
+    \item Developed ROS2 system architecture and subsystems for vision, planning, and control.
+    \item Coordinated efforts of multiple direct reports using GitHub issues and Asana for project management.
+\end{itemize}
+
+\subsection{Pickle Robot Company (Intern, 2020)}
+\begin{itemize}[itemsep=-0.1em]
+    \item Led a team of two interns to build a collaborative robotic palletizing system for the logistics industry.
+\end{itemize}
+
+\subsection{Riggs Fellowship in Manufacturing Engineering (2018-2019)}
+\begin{itemize}[itemsep=-0.1em]
+    \item Used Lean Manufacturing principles to help local manufacturers increase throughput by 156\%, reduce work-in-process inventory by 86\%, and save \$80,000 in annual costs, working as part of 3-person team.
+\end{itemize}
+
+\section{Professional Service}
+
+\subsection{AeroAstro Graduate Application Assistance Program (GAAP)}
+In 2020, I founded GAAP with the aim of increasing the diversity of students pursuing graduate study in our department by assisting students from underrepresented backgrounds in applying to our graduate program. Specifically, GAAP aims to connect students from underrepresented backgrounds with current graduate students in AeroAstro to provide 1-on-1 mentoring and support, e.g. reading personal statements and providing feedback, answering questions about life in graduate school, etc..
+\begin{itemize}
+    \item In 2020, I assembled an executive team of two other graduate students, secured support from senior faculty, obtained funding from our department, and successfully executed a pilot version of GAAP.
+    \item In 2021 and 2022, I continued to serve on the GAAP executive board, but began to transfer ownership of the program to the next generation of student leaders to ensure continuity of the program. We expanded the 1-on-1 mentoring program and added office hours for small-group mentoring.
+    \item To date, GAAP has connected 90+ students from underrepresented backgrounds with mentors in MIT AeroAstro and provided mentorship to 75+ additional students in office hours. 2021 data indicates that GAAP mentees had a \textbf{46\% increase in application completion rate} and a \textbf{100\% increase in admission rate} relative to a control group.
+\end{itemize}
+
+\subsection{MIT LIDS Student Conference}
+\begin{trivlist}
+    \item Co-chaired the 28th Annual Laboratory for Information and Decision Science (LIDS) Student Conference with Ashkan Soleimani, Behrooz Tahmasebi, Feng Zhu, Xinyu Wu, \& Andrew Fishberg (\href{https://lidsconf.mit.edu}{website}).
+\end{trivlist}
+
+\section{Undergraduate Students Mentored}
+\begin{description}[leftmargin=\parindent,labelindent=\parindent,itemsep=-0.1em,font=\normalfont]
+    \item[2022-23:] Mukun Oscar Tong (Tsinghua University '22)
+    \item[2021-22:] Dylan Goff (MIT Aeronautics and Astronautics '22)
+    \item[2021-22:] Bethany Lowenkamp (MIT Mechanical Engineering '22)
+    \item[2020-21:] Aileen Ma (MIT Computer Science '22)
+\end{description}
+
+\section{Awards}
+    \begin{description}[leftmargin=\parindent,labelindent=\parindent,font=\normalfont,itemsep=-0.1em]
+        \item[2021] \textbf{National Science Foundation Graduate Research Fellowship}
+        \item[2019] \textbf{Tau Beta Pi Graduate Fellowship}: Awarded to only 35 engineering students in the United States.
+        \item[2019] \textbf{Departmental Honors in Engineering}
+        \item[2019] \textbf{Departmental Honors in Humanities, Social Sciences, and the Arts}
+        \item[2019] \textbf{Harry E. Williams Mechanics Prize} for achievement applying mechanics to engineering problems.
+        \item[2017] \textbf{Astronaut Scholarship}: Awarded to only 45 STEM undergraduate students in the United States. 
+    \end{description}
+
+    \section{Publications}
+    \subsection{Under review}
+        \begin{description}
+            \item[2023 $\vert$]
+                \paper{Feb 2023}
+                    {\me, Chuchu Fan}
+                    {Accelerating failure mode prediction and mitigation using sampling and automatic differentiation}
+                    {Robotics: Science and Systems}
+                    {submitted}
+                    {}
+        \end{description}
+    \subsection{Peer-reviewed publications}
+        \begin{description}
+            % \item[YEAR $\vert$]
+            %     \paper{Month 20XX}
+            %         {Authors}
+            %         {Title}
+            %         {Venue}
+            %         {published/accepted/submitted}
+            %         {
+            %             \href{link}{(paper)}
+            %             \href{link}{(preprint)}
+            %             \href{link}{(code)}
+            %         }
+            \item[2023 $\vert$]
+                \paper{Jan 2022}
+                    {Mukun Tong, \me, Chuchu Fan}
+                    {Enforcing safety for vision-based controllers via Control Barrier Functions and Neural Radiance Fields}
+                    {IEEE International Conference on Robotics and Automation (ICRA)}
+                    {accepted}
+                    {
+                        \href{https://arxiv.org/abs/2209.12266}{(preprint)}
+                        \href{https://mit-realm.github.io/nerf-cbf/}{(website)}
+                    }
+            \item[2023 $\vert$]
+                \paper{Jan 2023}
+                    {\me, Sicun Gao, Chuchu Fan}
+                    {Safe Control With Learned Certificates: A Survey of Neural Lyapunov, Barrier, and Contraction Methods for Robotics and Control}
+                    {IEEE Transactions on Robotics}
+                    {published}
+                    {
+                        \href{https://ieeexplore.ieee.org/abstract/document/10015199}{(paper)}
+                        \href{https://github.com/MIT-REALM/neural_clbf}{(code)}
+                    }
+            \item[2022 $\vert$]
+                \paper{Oct 2022}
+                    {\me, Chuchu Fan}
+                    {Robust Counterexample-guided Optimization for Planning from Differentiable Temporal Logic}
+                    {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+                    {presented}
+                    {
+                        \href{https://ieeexplore.ieee.org/abstract/document/9981382}{(paper)}
+                        \href{https://mit-realm.github.io/architect-iros2022/}{(website)}
+                    }
+            \item[2022 $\vert$]
+                \paper{June 2022}
+                    {\me, Chuchu Fan}
+                    {Certifiable Robot Design Optimization using Differentiable Programming}
+                    {Robotics: Science and Systems}
+                    {presented}
+                    {
+                        \href{http://www.roboticsproceedings.org/rss18/p037.html}{(paper)}
+                        \href{https://mit-realm.github.io/architect-rss2022/}{(website)}
+                    }
+            \item[2022 $\vert$]
+                \paper{April 2022}
+                    {\me, Bethany Lowenkamp, Dylan Goff, Chuchu Fan}
+                    {Learning Safe, Generalizable Perception-Based Hybrid Control With Certificates}
+                    {IEEE Robotics and Automation Letters}
+                    {published}
+                    {
+                        \href{https://ieeexplore.ieee.org/abstract/document/9676477}{(paper)}
+                        \href{https://mit-realm.github.io/realm-locus-ral-icra-22/}{(website)}
+                    }
+            \item[2021 $\vert$]
+                \paper{Nov 2021}
+                    {\me, Zengyi Qin, Sicun Gao, Chuchu Fan}
+                    {Safe Nonlinear Control Using Robust Neural Lyapunov-Barrier Functions}
+                    {Conference on Robot Learning (CoRL)}
+                    {presented}
+                    {
+                        \href{https://proceedings.mlr.press/v164/dawson22a.html}{(paper)}
+                        \href{https://github.com/MIT-REALM/neural_clbf}{(code)}
+                    }
+            \item[2020 $\vert$]
+                \paper{Oct 2020}
+                    {\me, Ashkan Jasour, Andreas Hofmann, Brian Williams}
+                    {Provably Safe Trajectory Optimization in the Presence of Uncertain Convex Obstacles}
+                    {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+                    {presented}
+                    {
+                        \href{https://ieeexplore.ieee.org/abstract/document/9341193}{(paper)}
+                    }
+            \item[2019 $\vert$]
+                \paper{June 2019}
+                    {\me, Philip D. Cha}
+                    {A sensitivity-based approach to solving the inverse eigenvalue problem for linear structures carrying lumped attachments}
+                    {International Journal for Numerical Methods in Engineering}
+                    {published}
+                    {
+                        \href{https://onlinelibrary.wiley.com/doi/full/10.1002/nme.6147}{(paper)}
+                    }
+                \item[2019 $\vert$]
+                    \paper{Jan 2019}
+                        {Xiaxin Ding, Bin Gao, Elizabeth Krenkel, \me, James C. Eckert, Sang-Wook Cheong, and Vivien Zapf}
+                        {Magnetic properties of double perovskite $Ln_2\text{CoIrO}_6$ ($Ln = $ Eu, Tb, Ho): Hetero-tri-spin $3d-5d-4f$ systems}
+                        {Physical Review B}
+                        {published}
+                        {
+                            \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.014438}{(paper)}
+                        }
+        \end{description}
+
+    \subsection{Pre-prints}
+        \begin{description}
+            \item[2022 $\vert$]
+                \paper{Sep 2022}
+                    {\me, Austin Garrett, Falk Pollok, Yang Zhang, Chuchu Fan}
+                    {Barrier functions enable safety-conscious force-feedback control}
+                    {arXiv}
+                    {posted}
+                    {
+                        \href{https://arxiv.org/abs/2209.12270}{(preprint)}
+                    }
+            \item[2021 $\vert$]
+                \paper{Jan 2023}
+                    {\me, Ashkan Jasour, Andreas Hofmann, Brian Williams}
+                    {Chance-Constrained Trajectory Optimization for High-DOF Robots in Uncertain Environments}
+                    {arXiv}
+                    {posted}
+                    {
+                        \href{https://arxiv.org/abs/2302.00122}{(preprint)}
+                    }
+            \item[2020 $\vert$]
+                \paper{Mar 2020}
+                    {\me, Ashkan Jasour, Andreas Hofmann, Brian Williams}
+                    {Fast Certification of Collision Probability Bounds with Uncertain Convex Obstacles}
+                    {arXiv}
+                    {posted}
+                    {
+                        \href{https://arxiv.org/abs/2003.07792}{(preprint)}
+                    }
+        \end{description}
+
+    \subsection{Conference abstracts}
+        \begin{description}
+            \item[2021 $\vert$]
+                \paper{Aug 2021}
+                    {Axel Garcia, \me, Miles Lifson, David Arnas, Chuchu Fan, Christopher Jewison, Richard Linares}
+                    {Model Predictive Control and Safety Analysis for Satellite Collision Avoidance}
+                    {AAS/AIAA Astrodynamics Specialist Conference}
+                    {presented}
+                    {
+                        \href{https://www.researchgate.net/publication/353804229_Model_Predictive_Control_and_Safety_Analysis_for_Satellite_Collision_Avoidance_AAS_21-662}{(preprint)}
+                    }
+            \item[2020 $\vert$]
+                \paper{Nov 2020}
+                    {George C. Lordos, Caleb Amy, Becca Browder, Manwei Chan, \me, and 15 others}
+                    {Autonomously Deployable Tower Infrastructure for Exploration and Communication in Lunar Permanently Shadowed Regions}
+                    {AIAA ASCEND 2020}
+                    {presented}
+                    {
+                        \href{https://arc.aiaa.org/doi/abs/10.2514/6.2020-4109}{(preprint)}
+                    }
+        \end{description}
+
+% \talk{title}{venue}{host}{date}
+
+    % \section{Invited Talks}
+    % 	\begin{etaremune}
+    % 		\item \talk{Talk title}{Venue or location}{Host organization}{Date}
+    % 	\end{etaremune}
+
+    \section{Contributed Talks}
+        \begin{description}
+            \item[2022 $\vert$]
+                \talk{Robust Counterexample-guided Optimization for Planning from Differentiable Temporal Logic}
+                    {Kyoto, Japan}
+                    {International Conference on Intelligent Robots and Systems (IROS)}
+                    {Oct 2022}
+            \item[2022 $\vert$]
+                \talk{Certifiable Robot Design Optimization using Differentiable Programming}
+                    {New York, NY, USA}
+                    {Robotics: Science and Systems}
+                    {June 2022}
+            \item[2022 $\vert$]
+                \talk{Learning Safe, Generalizable Perception-Based Hybrid Control With Certificates}
+                    {Philadelphia, PA, USA}
+                    {International Conference on Robotics and Automation (ICRA)}
+                    {April 2022}
+            \item[2020 $\vert$]
+                \talk{Provably Safe Trajectory Optimization in the Presence of Uncertain Convex Obstacles}
+                    {Virtual}
+                    {International Conference on Intelligent Robots and Systems (IROS)}
+                    {Oct 2020}
+        \end{description}
+
+\end{document}
